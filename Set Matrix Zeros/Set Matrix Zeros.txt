@@ -1,0 +1,12 @@
+question link:
+https://www.codingninjas.com/codestudio/problems/set-matrix-zeros_3846774?topList=striver-sde-sheet-problems&leftPanelTab=0
+
+Now how to solve that question without taking any space
+approach:
+first find the zero element in the matrix then mark the 0 in the 0th row and column
+after marking all zero element search for those marking and make whole row amd column to zero
+
+time complexity is O(n)
+space complexity is O(1)
+
+

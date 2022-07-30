@@ -1,0 +1,11 @@
+Question: https://www.codingninjas.com/codestudio/problems/sort-0-1-2_631055?topList=striver-sde-sheet-problems&leftPanelTab=0
+
+Approach
+----------------------------------------------------------------
+We can exploit the property that we will only haves 0s,1sand 2s in our array.
+
+-> Count the frequency of 0s and 1s and 2s present in the array
+-> Start from i=0 and first fill the number of 0s present in the array
+->then fill the number of 1s present in the array
+->then fill the number of 2s present in the array
+-> Finally we have a sorted array of 0s, 1sand 2s

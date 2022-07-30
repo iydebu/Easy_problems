@@ -1,0 +1,17 @@
+Question Link:https://www.codingninjas.com/codestudio/problems/pascal-s-triangle_1089580?topList=striver-sde-sheet-problems&leftPanelTab=0
+
+Approach:
+The idea is to use the definition of the pascals triangle that its cofficient
+and are summation of adjacent is preceding rows. so in this way we can store 
+the elements in a matrix and for futher generation of values in it we can check
+the preceding elemnts and updat the values.
+
+-> Declare an ArrayList of array list PASCALS to store the elements values
+-> Run a loop from row i =0 till n-1
+-> Now inside this loop run one more loop from j=0 till j<=i
+-> if the number is first or last one then just store 1 in the matrix i.e pascals[i][j] = 1;
+-> else store the sum of adjecent elemnts in preceding rows i.e pascals[i][j] = pascals[i-1][j-1]+pascal[i-1][j]
+-> Print this value i.e the value in the current iteration pascal[i][j]
+
+Time complexity : O(n^2)
+Space complexity : O(n)
