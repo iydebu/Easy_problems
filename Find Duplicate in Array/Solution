@@ -1,0 +1,21 @@
+Approach:
+
+we use array indices to store the visited state of each number. We know that only the dulicate element
+would be visited more than once.For each nuber we go to its index position and checking whether it less than
+zero arr[index]<0 if yes we revited there it means its a dublicate element else we make it negative by multiplying
+-1 by the number.
+
+Explanation: 
+
+Traverse from start and get index by abs(i) -1 then check its value is negative if yes return, otherwise
+multiply by -1 for mark the number to be visited
+
+2 4 1 5 3 6 8 7 4
+
+-2 -4 -1 -5 -3 -6 -8 -7 4
+
+-4 is negative hence it revisted there it means its a dublicate element
+
+Output: 
+
+4
