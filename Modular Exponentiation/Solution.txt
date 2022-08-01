@@ -1,0 +1,17 @@
+Iterative Approach
+
+The idea here is to split'N' inpowers of two by converting it intos binary representation to achive answer is O(log 'N') steps.
+For example if N= 7 and x=8 .The binary representaion of N = 111. So 8^7 can be calculated using multiplication 8^4, 8^2 ,8
+so in each step we will keep squaaring 'X' and if N has a set bit its binary representation then we will multiply x to answer.
+
+The steps are as follows:
+
+1. Declare a variable to store our result , say 'Answer' and intialize it with 1
+2. Run a long until 'N' > 0 and do:
+   -> if bitwise Of N with 1 is 1 then multiply answer with x
+   -> Do modular squaring of X X= (X*X)%M
+   -> Shift one bit of N and save it in N
+3. Finally return the Answer
+
+Time Complexity: O(logN)
+Space Complexity: O(1)
