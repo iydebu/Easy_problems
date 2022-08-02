@@ -1,0 +1,29 @@
+Boyer-Moore majority vote algorithm
+
+Approach:
+
+We can find the majority elemnt in linear tie and constant space using Moore's voting algorithm.
+It is based on the fact that since the majority element occur  more than floor of ('N' /2)
+times, its frequency will be greater than the combined frequency of all other elements.
+
+The algorithm gives the correct answer only if the majority element exists in the array. So, in the end,
+ we have to check the frequency of the majority element to confirm.
+
+ The steps are as follows:
+ 1. We will maintian majority element to keep track of the possible candidate of the majority elemnts.
+2. We will intialize count = 0 to store the count of majority element
+
+3 Loop through array elemnts.
+  --> if count ==0 
+        : we set majority element to the current set count to 1, and continue iterating.
+
+  -->else 
+        : if the current element is equal to the majority element, we increment the count by 1
+        : else we decrement the count by 1
+
+4 Now we again traverse through the array and find the count of 'Majority element'
+5 if the count is greater than floor('N'/2). We return 'majority Element' as the answer. Else, we return -1.
+
+Time complexity : O(n)
+
+Space Complexity : O(1)
