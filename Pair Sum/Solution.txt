@@ -1,0 +1,31 @@
+Sorted two tracking
+
+Apporach
+
+This Apporach required sorted array and two tracker , one from begning and second from end
+we use combination technique to find remaning pairs
+
+steps:
+1- First sort the given array with merge sort
+2- Take two variable for tracking and initialize first one to 0 and second one to size -1
+3-  iterate the loop till l(first tracker)<r(second tracker)
+4- check if the array[l] + array[r] is less than the target sum 
+   : if yes then l++;
+5- else if check if the array[l] + array[r] is greater than the target sum 
+   : if yes then r--;
+6- else we have right pair, now we check for the combination
+    : if the array[l] == array[r], it means all the elments lie middle in them are same
+      so we apply the combination formula (r-l+1)*(r-1)/2 to count number of repetions of the pair, and added in the result array and return the array
+
+    : Create two count variables and initiziles to zero (first count for first tracker and second count for second tracker)
+    : then we check if the next element from left tracker is same as previous element
+      : if yes then we increment count1 and left tracker
+    : then we check if the next element from right tracker is same as previous element
+      : if yes then we increment count2 and decrement right tracker
+    : then we find number of combination made(count1 * count2) and store it in count variables
+    : then we add repeated pair in result according to count
+
+7-  return the final result
+
+Time complexity : N(logN)
+Space complexity : O(N)
